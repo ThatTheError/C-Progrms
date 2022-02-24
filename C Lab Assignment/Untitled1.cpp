@@ -1,0 +1,44 @@
+if(qzero==1 && qprev==0)
+{
+	while(count<4)
+	{
+		qzero=que2[3],c=0;
+		if(qzero==1 && qprev==0)
+		{
+			twos_comp(multiplicant2,twoscomp);
+			full_adder(acc,twoscomp,addval,&c);
+			for(i=0;i<4;i++)
+			{
+				acc[i]=addval[i];
+			}
+			assemble(acc,que2,beforeshift,&qprev);
+			shifting(beforeshift,aftershift);
+			disassemble(aftershift,acc,que2,&qprev);
+		}
+		count++;
+	}
+else if(qzero==0 && qprev==1)
+{
+	while(count<4)
+	{
+			full_adder(acc,multiplicant2,addval,&c);
+			for(i=0;i<4;i++)
+			{
+				acc[i]=addval[i];
+			}
+			assemble(acc,que2,beforeshift,&qprev);
+			shifting(beforeshift,aftershift);
+			disassemble(aftershift,acc,que2,&qprev);
+		}
+		count++;
+	}
+else
+{
+	while(count<4)
+	{
+			assemble(acc,que2,beforeshift,&qprev);
+			shifting(beforeshift,aftershift);
+			disassemble(aftershift,acc,que2,&qprev);
+	}	
+	count++;
+}

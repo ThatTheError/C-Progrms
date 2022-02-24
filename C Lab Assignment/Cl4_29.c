@@ -1,0 +1,67 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,k;
+	for(i=1;i<=5;i++)
+	{
+		for(j=i;j<=5;j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	printf("\n");
+	for(i=1;i<=5;i++)
+	{
+		for(j=1;j<i;j++)
+		{
+			printf(" ");
+		}
+		for(k=5;k>=i;k--)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	printf("\n");
+	for(i=1;i<=5;i++)
+	{
+		for(j=1;j<i;j++)
+		{
+			printf(" ");
+		}
+		for(k=5;k>=i;k--)
+		{
+			printf("* ");
+		}
+		printf("\n");
+	}
+	printf("\n");
+	for(i='a';i<='e';i++)
+	{
+		for(j='a';j<=i;j++)
+		{
+			printf("%c",j);
+		}
+		printf("\n");
+	}
+	for(i=1;i<=5;i++)
+	{
+		for(j=i;j>=1;j--)
+		{
+			printf("%d",j);
+		}
+		printf("\n");
+	}
+	for(i=1;i<=5;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			if(j%2==0)
+			printf("0");
+			else
+			printf("1");
+		}
+		printf("\n");
+	}
+}
